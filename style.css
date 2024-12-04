@@ -1,0 +1,318 @@
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+ }
+ #navbar{
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  
+ }
+ #menu {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  padding: 20px;
+  justify-content: space-between;
+  color: white;
+}
+ #cart{
+   display: flex;
+   gap: 20px;
+ }
+ #fav_logo{
+   font-size: 25px;
+  cursor: pointer;
+
+ }
+ #cart_logo{
+   font-size: 25px;
+  cursor: pointer;
+
+ }
+ .productContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  transition: transform 0.8s;
+ }
+ .product{
+  width: 22%;
+  height: 70%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color:lightcyan;
+  transition: transform 0.3s ease-in-out;
+ }
+.product:hover {
+  transform: scale(0.95);
+  overflow: hidden;
+}
+.product img {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+ 
+
+.product p {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #333;
+}
+#CartButton{
+  background-color: #007bff;
+}
+#CartButton{
+  background-color: #0056b3;
+
+}
+.product button {
+  background-color: #007bff;
+  background: none;
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.product i {
+  font-size: 22px;
+  cursor: pointer;
+  color: #ff4757;
+}
+
+.product i:hover {
+  color: #e84118;
+}
+
+/* Cart and Favourite Panels */
+.Cart,
+.Favourite {
+  position: fixed;
+  top: 100px;
+  right: -780px;
+  width: 350px;
+  height: 100%;
+  background-color: #f8f9fa;
+  box-shadow: -3px 0 5px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  padding: 20px;
+  transition: right 0.3s;
+}
+
+.Cart h2,
+.Favourite h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.cart-item,
+.Favourite-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cart-item img,
+.Favourite-item img {
+  width: 70px;
+  height: 70px;
+  margin-right: 15px;
+  border-radius: 6px;
+}
+
+.cart-item p,
+.Favourite-item p {
+  margin: 0;
+  font-size: 14px;
+  flex: 1;
+}
+
+.cart-item button,
+.Favourite-item button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.cart-item button:hover,
+.Favourite-item button:hover {
+  background-color: #a71d2a;
+}
+
+/* Product Details Section */
+#productdetails {
+  margin: 20px 0;
+}
+
+.description {
+  text-align: center;
+}
+
+#productdisplaydescription {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+#productdisplaydescription img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+#productdisplaydescription button {
+  margin: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#productdisplaydescription button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .productContainer {
+    justify-content: center;
+  }
+
+  .product {
+    width: 45%;
+  }
+
+  .Cart,
+  .Favourite {
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .Cart,
+  .Favourite {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .cart-item img,
+  .Favourite-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .cart-item p,
+  .Favourite-item p {
+    font-size: 13px;
+  }
+
+  .cart-item button,
+  .Favourite-item button {
+    padding: 6px 10px;
+  }
+
+ 
+}
+
+@media (max-width: 480px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .Cart,
+  .Favourite {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+
+.footermain{
+  background-color: rgba(207, 206, 206, 0.97);
+  width:100%;
+  height:100%;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 40px;
+}
+.footerhead{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+}
+.footerheader{
+  font-weight: 600;
+}
+.footerbody p{
+  margin: 2px;
+}
+.footerdescriptionmain{
+  text-align: center;
+  padding: 10px;
+  margin: 20px 10px 5px 10px;
+  font-size: small;
+}
+.socialmedialist{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap:25px
+}
+.hmLogo{
+  text-align: center;
+  padding: 15px;
+}
+.copyright{
+  text-align: center;
+  font-size: small;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
