@@ -1,5 +1,5 @@
-// const url ="https://fake-3nts.onrender.com/products";
-const url="http://localhost:3000/products"
+const url ="https://fake-3nts.onrender.com/products";
+
 
 
 
